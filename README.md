@@ -19,21 +19,56 @@ You can install redis on Linux by following the commands [here](https://redis.io
 
 You can install redis on Windows by following the instructions [here](https://redislabs.com/ebook/appendix-a/a-3-installing-on-windows/a-3-2-installing-redis-on-window/)
 
-## Set up
+## Getting Started
 
-* clone the repo
-* cd node-redis-app
-* run `npm install`
+- Clone this repo
+```
+git clone https://github.com/paulayuk/node-redis-app.git
+
+```
+- change directory into the newly cloned repo
+```
+cd node-redis-app
+
+```
+- Install required node.js libraries
+```
+npm install
+
+```
 * copy the contents of .env.example to .env
-* run `npm start`
+```
+cp .env.example .env
+```
 
-## Api test
-
-Using your preferred API test client send requests to the endpoints found [here](https://github.com/paulayuk/node-redis-app/blob/master/routes/api.js)
+- serve the application
 
 ```
-E.G to get all posts visit
-  http://localhost:4000/posts
+npm start
 
 ```
+
+## Testing the API
+
+# Parameters
+
+The API expects the following Parameters: </br>
+`id` of type int </br>
+`title` of type string </br>
+`contents` of type string </br>
+
+
+# Using Postman you can test this [endpoints](https://github.com/paulayuk/node-redis-app/blob/master/routes/api.js) 
+
+Make sure post is set to `x-www-form-urlencoded`
+* get all posts (GET): `/posts`
+* get one post (GET): `/post/{id}`
+* create a new post (POST): `/post/create`
+* delete post (DELETE): `/post/delete/{id}`
+* update a post (PUT): `/post/update/{id}`
+
+
+
+
+
 
