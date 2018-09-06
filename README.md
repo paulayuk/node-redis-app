@@ -24,5 +24,16 @@ You can install redis on Windows by following the instructions [here](https://re
 * clone the repo
 * cd node-redis-app
 * run `npm install`
+* copy the contents of .env.example to .env
 * run `npm start`
-* visit http://localhost:4000
+
+## Api test
+
+Using your preferred API test client send requests to the endpoints found [here](https://github.com/paulayuk/node-redis-app/blob/master/routes/api.js)
+
+```
+E.G to get all posts visit
+  http://localhost:4000/posts
+
+```
+
