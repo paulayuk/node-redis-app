@@ -1,30 +1,6 @@
 const redis  = require('redis');
 const client = redis.createClient();
 
-exports.getAllPosts = (req, res, next) => {
-
-  let return_dataset = []
-
-  client.keys('*', (err, id) => {
-    let multi = client.multi()
-    let keys = Object.keys(id)
-    let i = 0
-
-    keys.forEach( (l) => {
-      client.hgetall(id[l], (e, o) => {
-        i++
-        if (e) {console.log(e)} else {
-          temp_data = {'id':id[l],'data':o}
-          return_dataset.push(temp_data)
-        }
-
-        if (i == keys.length) {
-          res.send({posts:return_dataset})
-        }
-      })
-    })
-  })
-}
 
 
 exports.createPost = (req, res, next) => {
@@ -101,5 +77,33 @@ exports.updatePost = (req, res, next) => {
 
     console.log(reply)  // log success message
     res.send("Post updated successfully") // response to client
+  })
+}
+
+exports.getAllPosts = (req, res, next) => {
+
+  let postData = []
+
+  client.keys('*', (err, id) => {
+    let multi = client.multi()
+    let keys = Object.keys(id)
+    let i = 0
+
+    keys.forEach( (d) => {
+      client.hgetall(id[d], (err, o) => {
+        i++
+        if(err)
+        {
+          console.log(err)
+        } else {
+          tempData = {'id':id[d],'data':o}
+          postData.push(tempData)
+        }
+
+        if (i == keys.length) {
+          res.send({posts:postData})
+        }
+      })
+    })
   })
 }
