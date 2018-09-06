@@ -47,10 +47,13 @@ cp .env.example .env
 npm start
 
 ```
+## You can now visit http://localhost:4000
+```
+ N/B: If you don't configure your .env file your app will default to port 3000 and would be live at http://localhost:3000.
+```
+# Testing the API
 
-## Testing the API
-
-# Parameters
+## Parameters
 
 The API expects the following Parameters: </br>
 `id` of type int </br>
@@ -58,7 +61,7 @@ The API expects the following Parameters: </br>
 `contents` of type string </br>
 
 
-# Using Postman you can test this [endpoints](https://github.com/paulayuk/node-redis-app/blob/master/routes/api.js) 
+## Using Postman you can test this [endpoints](https://github.com/paulayuk/node-redis-app/blob/master/routes/api.js) 
 
 Make sure post is set to `x-www-form-urlencoded`
 * get all posts (GET): `/posts`
