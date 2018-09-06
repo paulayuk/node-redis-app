@@ -67,7 +67,7 @@ Make sure post is set to `x-www-form-urlencoded`
 * get all posts (GET): `/posts`
 * get one post (GET): `/post/{id}`
 * create a new post (POST): `/post/create`
-* delete post (DELETE): `/post/delete/{id}`
+* delete a post (DELETE): `/post/delete/{id}`
 * update a post (PUT): `/post/update/{id}`
 
 
