@@ -1,0 +1,39 @@
+{
+  "name": "node-redis-app",
+  "version": "1.0.0",
+  "description": "CRUD Api built with node and redis",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulayuk/node-redis-app.git"
+  },
+  "keywords": [
+    "Node",
+    "Redis",
+    "APi"
+  ],
+  "author": "Paul Ayuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulayuk/node-redis-app/issues"
+  },
+  "homepage": "https://github.com/paulayuk/node-redis-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^3.0.0",
+    "nodemon": "^1.18.4",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "supertest": "^3.2.0"
+  }
+}
